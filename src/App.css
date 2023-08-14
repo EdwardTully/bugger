@@ -67,7 +67,7 @@ li {
   grid-row: 1/10;
   box-shadow: 0 0 0 5px hsl(0, 11%, 98%, 0.50);
   margin: 10px;
-  height: 900px;
+  height: 300px;
   display: flex;
   flex-direction: column;
  

@@ -13,11 +13,7 @@ function App() {
         <TodoView />
         <UserWindow />
         <UserEmail />
-       
-
-        
-
-        <PostsView />
+         <PostsView />
 
       </div>
     </div>
