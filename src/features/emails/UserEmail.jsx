@@ -17,23 +17,22 @@ const dispatch = useDispatch()
 const userEmail = useSelector((state)=>state.emails)
 
 return (
-  <div>
-    <h2>User Email</h2>
- 
-<button onClick={() => dispatch(fetchEmail())}>Get User Name and Email</button>
-
+  <div className='emailCont'>
+ <br/>
+<button id='buttons' onClick={() => dispatch(fetchEmail())}>Get User Name and Email</button>
+<br/>
 {userEmail.loading && <div>Loading...</div>}
 {!userEmail.loading && userEmail.error ? (
   <div>Error: {userEmail.error}</div>
 ) : null}
 {!userEmail.loading && userEmail.emails.length ? (
-  <div id="usersCont">
-    <ul>
+  
+    <ul className='emails'>
       {userEmail.emails.map((ea) => (
         <li key={ea.id}>{`${ea.name} has email ${ea.email}`}</li>
       ))}
     </ul>
-  </div>
+  
 ) : null}
   </div>
 );

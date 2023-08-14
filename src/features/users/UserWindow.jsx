@@ -17,25 +17,27 @@ const dispatch = useDispatch()
 const usersInfo = useSelector((state)=>state.users)
 
 return (
-  <div>
-    <h2>User List</h2>
-    <button onClick={() => dispatch(fetchUsers())}>Get User Names</button>
+  <div className='userCont'>
+    <br/>
+    <button id='buttons' onClick={() => dispatch(fetchUsers())}>Get User Names</button>
+    
+   
 
     {usersInfo.loading && <div>Loading...</div>}
     {!usersInfo.loading && usersInfo.error ? (
       <div>Error: {usersInfo.error}</div>
     ) : null}
     {!usersInfo.loading && usersInfo.users.length ? (
-      <div id="usersCont">
-        <ul>
+      
+        <ul className='users'>
           {usersInfo.users.map((ea) => (
             <li key={ea.id}>{ea.name}</li>
           ))}
         </ul>
-      </div>
+      
     ) : null}
 
-
+    
   </div>
 );
 }
