@@ -4,6 +4,7 @@ import UserWindow from './features/users/UserWindow';
 import UserEmail from './features/emails/UserEmail';
 import TodoView from './features/todos/TodoView';
 import PostsView from './features/posts/PostsView';
+import PushView from './features/PUSH/PushView';
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
         <UserWindow />
         <UserEmail />
          <PostsView />
-
+         <PushView/>
+    
       </div>
+     
     </div>
   );
 }
