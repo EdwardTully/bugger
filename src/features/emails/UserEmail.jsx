@@ -19,8 +19,8 @@ const userEmail = useSelector((state)=>state.emails)
 return (
   <div className='emailCont'>
  <br/>
-<button id='buttons' onClick={() => dispatch(fetchEmail())}>Get User Name and Email</button>
-<br/>
+<button id='buttons' onClick={() => dispatch(fetchEmail())}>Load Name and Email</button>
+
 {userEmail.loading && <div>Loading...</div>}
 {!userEmail.loading && userEmail.error ? (
   <div>Error: {userEmail.error}</div>

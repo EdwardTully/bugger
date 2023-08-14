@@ -10,16 +10,16 @@ function TodoView() {
   return (
     <div className='todosCont'>
         <br/>
-        <button id='buttons' onClick={()=>dispatch(fetchTodos())}>Get Todos</button>
+        <button id='buttons' onClick={()=>dispatch(fetchTodos())}>Load Todos</button>
         <br/>
         
         {todoData.loading && <div>Loading....</div>}
         {!todoData.loading && todoData.error ? (<div>Error: {todoData.error}</div>):null}
         {!todoData.loading && todoData.todos.length ? (
           <div className='todos'>
-            <ul>
-                {todoData.todos.map((ea)=><li key={ea.id}>{ea.title}</li>)}
-            </ul>
+            <ol>
+                {todoData.todos.map((ea)=><li key={ea.id}>{`${ea.title} assigned to ${ea.userId}`}</li>)}
+            </ol>
           </div>
             
         ):null}

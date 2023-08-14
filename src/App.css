@@ -14,8 +14,8 @@
   background: white;
   font-size: 22px;
   border-radius: 10px;
-  width: 300px;
-  height: 38px;
+  width: 250px;
+  height: 30px;
 
   border: none;
 }
@@ -32,12 +32,12 @@
   grid-template-columns: minmax(150px, 300px) minmax(150px, 300px) minmax(
       150px,
       300px
-    ) minmax(150px, 300px);
+    ) minmax(150px, 300px) minmax(150px, 300px);
 }
 
 .todosCont {
-  grid-column: 1/3;
-
+  grid-column: 1/6;
+ 
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -57,14 +57,14 @@
 }
 
 li {
-  list-style: none;
 }
 .userCont {
-  grid-column: 3/5;
+  grid-column: 4/6;
   height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 
 .users {
@@ -77,11 +77,12 @@ li {
 }
 
 .emailCont {
-  grid-column: 1/5;
+  grid-column: 1/4;
   height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 .emails {
   margin: auto;
@@ -89,5 +90,22 @@ li {
 }
 
 .emails::-webkit-scrollbar {
+  display: none;
+}
+.postCont {
+  grid-column: 1/6;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.posts {
+  margin: auto;
+  overflow: scroll;
+
+}
+.posts::-webkit-scrollbar{
   display: none;
 }

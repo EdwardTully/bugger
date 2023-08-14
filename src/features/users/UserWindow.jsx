@@ -19,7 +19,7 @@ const usersInfo = useSelector((state)=>state.users)
 return (
   <div className='userCont'>
     <br/>
-    <button id='buttons' onClick={() => dispatch(fetchUsers())}>Get User Names</button>
+    <button id='buttons' onClick={() => dispatch(fetchUsers())}>Load User Names</button>
     
    
 
