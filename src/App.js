@@ -11,8 +11,9 @@ function App() {
       <h1>Fetch, redux/react/axios</h1>
       <div className="container">
         <TodoView />
-        <UserEmail />
         <UserWindow />
+        <UserEmail />
+       
 
         
 
