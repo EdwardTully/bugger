@@ -28,7 +28,7 @@
 .container {
   display: grid;
   width: 70%;
-  background: rgba(240, 230, 177, 0.43);
+  background: rgba(177, 240, 184, 0.201);
   margin: auto;
   height: 1250px;
   grid-template-columns: repeat(5, 1fr);
